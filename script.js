@@ -39,4 +39,78 @@ function calculate()
     history_val.value=equation+"=";
     var answer=eval(equation);
     current_val.value=answer;
+
+    addHistory(equation,answer);
+}
+
+function addHistory(equation,answer)
+{
+    equation=history_val.value;
+    answer=current_val.value;
+    document.querySelector(".historyElement").innerHTML+=`<div class="historyElement">
+            <p id="eqn">${equation}</p>
+            <p id="ans">${answer}</p>
+            <hr>
+        </div>`;
+}
+
+function clearHistory()
+{
+    if(confirm("Are you sure you want to clear the history?"))
+    {
+        document.querySelector(".historyElement").innerHTML='';
+    }
+}
+
+function showHistory()
+{
+    document.querySelector(".history").style.display="block";
+}
+
+function hideHistory()
+{
+    document.querySelector(".history").style.display="none";
+}
+
+let flag=true;
+function brackets()
+{
+    if(flag)
+    {
+        setValue("(");
+        flag=false;
+    }
+    else
+    {
+        setValue(")");
+        flag=true;
+    }
+}
+
+function percentage()
+{
+    let equation=current_val.value;
+    let answer=eval(equation)/100;
+    current_val.value=answer;
+    history_val.value=equation+"%";
+    addHistory(equation+"%",answer);
+}
+
+function floating()
+{
+    if (current_val.value === '' || current_val.value === '0') {
+        setValue('0.');
+    } else {
+        const operators = ['+', '-', '*', '/'];
+        let lastNumber = '';
+        for (let i = current_val.value.length - 1; i >= 0; i--) {
+            if (operators.includes(current_val.value[i])) {
+            break;
+            }
+            lastNumber = current_val.value[i] + lastNumber;
+        }
+        if (lastNumber.indexOf('.') === -1) {
+            setValue('.');
+        }
+    }
 }

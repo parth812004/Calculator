@@ -3,13 +3,29 @@
     margin: 0;
     padding: 0;
 }
+#title {
+    margin: 10px;
+    display: inline-block;
+    color: white;
+}
+.main{
+    width:100%;
+}
 .container {
     display: inline-block;
     margin: 40px;
-    border: 2px solid black;
-    padding: 40px;
+    border-radius:30px;
+    padding:10px 40px 20px 40px;
     width:25%;
     background-color:black;
+}
+.historyButton{
+    margin-top:5px;
+}
+#allHistory{
+    color:#f2a33c;
+    background-color: transparent;
+    font-size: 30px;
 }
 input:focus {
     outline: none;
@@ -60,3 +76,50 @@ button {
 .first{
     background-color: #5c5c5f;
 }
+.history {
+    display: none;
+    float: right;
+    padding: 10px;
+    background-color: black;
+    color:white;
+    height:100vh;
+    width:20%;
+    font-family: -apple-system;
+    font-size: 20px;
+    
+}
+.historyElement{
+    margin-top:15px;
+    position: relative;
+    overflow-y: auto; 
+    max-height: 80%;
+}
+#eqn{
+    color:#88888d;
+    font-size: 20px;
+}
+#ans{
+    font-size: 30px;
+}
+hr{
+    border: 1px solid #88888d;
+    margin-top: 10px;
+}
+.clear {
+    bottom: 0;
+    position: absolute;
+    width: inherit;
+    border-radius: 20px;
+    padding-bottom:15px;
+    padding-left:15px;
+}
+#clearAll {
+    color:red;
+    border-radius: 20px;
+    width: 40%;
+}
+#hideHistory{
+    border-radius: 20px;
+    width: 40%;
+}
+    
