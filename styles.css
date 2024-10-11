@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+#title {
+    margin: 10px;
+    display: inline-block;
+    color: white;
+}
+.main{
+    width:100%;
+}
+.container {
+    display: inline-block;
+    margin: 40px;
+    border-radius:30px;
+    padding:10px 40px 20px 40px;
+    width:25%;
+    background-color:black;
+}
+.historyButton{
+    margin-top:5px;
+}
+#allHistory{
+    color:#f2a33c;
+    background-color: transparent;
+    font-size: 30px;
+}
+input:focus {
+    outline: none;
+}
+input#history {
+    /* visibility: hidden; */
+    background-color: black;
+    color:#5c5c5f;
+    font-size: 25px;
+    text-align: right;
+    border:none;
+    width:100%;
+}
+input#current {
+    background-color: black;
+    color: white;
+    text-align: right;
+    border:none;
+    width:100%;
+    font-size: 50px;
+}
+.buttons {
+    margin-top: 10px;
+}
+.row {
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.display {
+    padding: 0px 15px;
+}
+button {
+    background-color: #2a2a2c;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    width: 20%;
+    height: 55px;
+    border: none;
+    margin-right: 5px;
+    font-size: 22px;
+}
+.operator {
+    background-color: #f2a33c;
+}
+.first{
+    background-color: #5c5c5f;
+}
+.history {
+    display: none;
+    float: right;
+    padding: 10px;
+    background-color: black;
+    color:white;
+    height:100vh;
+    width:20%;
+    font-family: -apple-system;
+    font-size: 20px;
+    
+}
+.historyElement{
+    margin-top:15px;
+    position: relative;
+    overflow-y: auto; 
+    max-height: 80%;
+}
+#eqn{
+    color:#88888d;
+    font-size: 20px;
+}
+#ans{
+    font-size: 30px;
+}
+hr{
+    border: 1px solid #88888d;
+    margin-top: 10px;
+}
+.clear {
+    bottom: 0;
+    position: absolute;
+    width: inherit;
+    border-radius: 20px;
+    padding-bottom:15px;
+    padding-left:15px;
+}
+#clearAll {
+    color:red;
+    border-radius: 20px;
+    width: 40%;
+}
+#hideHistory{
+    border-radius: 20px;
+    width: 40%;
+}
+    

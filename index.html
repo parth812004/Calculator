@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Calculator</title>
+</head>
+<body>
+
+    <div class="main">
+        <div class="container">
+            <h1 id="title">Simple Calculator</h1>
+            <div class="historyButton">
+                <button id="allHistory" onclick="showHistory()"><span class="material-symbols-outlined">
+                    list
+                </span></button>
+            </div>
+            <div class="display">
+                <input type="text" id="history" disabled>
+                <input type="text" id="current" value="0">
+            </div>
+            <div class="buttons">
+                <div class="row">
+                    <button class="first" onclick="allClear()">AC</button>
+                    <button class="first" onclick="brackets()">( )</button>
+                    <button class="first"
+                    onclick="percentage()">%</button>
+                    <button class="operator" onclick="setValue('/')">÷</button>
+                </div>
+                <div class="row">
+                    <button onclick="setValue('7')">7</button>
+                    <button onclick="setValue('8')">8</button>
+                    <button onclick="setValue('9')">9</button>
+                    <button class="operator" onclick="setValue('*')">x</button>
+                </div>
+                <div class="row">
+                    <button onclick="setValue('4')">4</button>
+                    <button onclick="setValue('5')">5</button>
+                    <button onclick="setValue('6')">6</button>
+                    <button class="operator" onclick="setValue('-')">-</button>
+                </div>
+                <div class="row">
+                    <button onclick="setValue('1')">1</button>
+                    <button onclick="setValue('2')">2</button>
+                    <button onclick="setValue('3')">3</button>
+                    <button class="operator" onclick="setValue('+')">+</button>
+                </div>
+                <div class="row">
+                    <button onclick="backspace()">⌫</button>
+                    <button onclick="setValue('0')">0</button>
+                    <button onclick="floating()">.</button>
+                    <button class="operator" onclick="calculate()">=</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="history">
+            <h1>History</h1>
+            <div class="clear">
+            <button id="clearAll" onclick="clearHistory()">Clear All</button>
+            <button id="hideHistory" onclick="hideHistory()">Hide</button>
+            </div>
+            <div class="historyElement">
+            <!-- <div class="Calculated">
+                <p id="eqn">5-2=</p>
+                <p id="ans">3</p>
+                <hr>
+            </div> -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
