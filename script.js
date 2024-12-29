@@ -121,3 +121,20 @@ function floating()
         }
     }
 }
+
+document.addEventListener('keydown', function(event) {
+    const key = event.key;
+    if (!isNaN(key) || ['+', '-', '*', '/', '(', ')', '.'].includes(key)) {
+        event.preventDefault(); // Prevent the default action to avoid double input
+        setValue(key);
+    } else if (key === 'Enter') {
+        event.preventDefault(); // Prevent the default action to avoid double input
+        calculate();
+    } else if (key === 'Backspace') {
+        event.preventDefault(); // Prevent the default action to avoid double input
+        backspace();
+    } else if (key === 'Escape') {
+        event.preventDefault(); // Prevent the default action to avoid double input
+        allClear();
+    }
+});
